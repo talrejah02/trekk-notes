@@ -1,0 +1,31 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    background-color: var(--background-primary);
+    row-gap: 1rem;
+}
+.home-header{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    background-color: var(--font-primary);
+    border-radius: 7px;
+    padding: 0.3rem;
+
+}
+.home-input{
+    padding: 0.3rem;
+    font-size: 1.1rem;
+    width: 25rem;
+    color: var(--font-dark);
+   
+}
+.home-input:focus{
+    outline: none;
+}
+.home-search-icon{
+    width:1.5rem;
+    fill: var(--primary);
+}
