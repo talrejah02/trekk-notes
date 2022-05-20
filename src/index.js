@@ -5,8 +5,10 @@ import App from "./App";
 import { makeServer } from "./server";
 import { ChakraProvider } from "@chakra-ui/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { AuthProvider } from "./context";
+import { ArchiveProvider, AuthProvider } from "./context";
 import { NotesProvider } from "./context/notesContext";
+import { ModalProvider } from "./context/modalContext";
+import { TrashProvider } from "./context/trashContext";
 
 // Call make Server
 makeServer();
@@ -14,13 +16,19 @@ makeServer();
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <AuthProvider>
-        <ChakraProvider>
-          <NotesProvider>
-        <App />
-          </NotesProvider>
-      </ChakraProvider>
-      </AuthProvider>
+      <NotesProvider>
+        <AuthProvider>
+          <ChakraProvider>
+            <TrashProvider>
+              <ArchiveProvider>
+                <ModalProvider>
+                  <App />
+                </ModalProvider>
+              </ArchiveProvider>
+            </TrashProvider>
+          </ChakraProvider>
+        </AuthProvider>
+      </NotesProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")

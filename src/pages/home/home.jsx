@@ -11,7 +11,7 @@ import "./home.css"
 function Home() {
   const navigate = useNavigate()
   const { isLogin } = useAuth()
-  const {Allnotes,setAllnotes}=useNotes()
+  const {Allnotes,setAllnotes}=useNotes([])
   
   useEffect(() => {
     
@@ -40,7 +40,7 @@ function Home() {
       </section>
       <Noteseditor />
       {Allnotes.length > 0&&
-      <Noteslisting/>}
+        <Noteslisting notes={Allnotes} actionType={"home"} />}
     </div>
   )
 }
