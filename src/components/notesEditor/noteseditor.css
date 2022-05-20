@@ -33,7 +33,9 @@
     display:flex;
 }
 .btn-primay-submit{
- color: var(--font-secondary);
+    background-color: var(--primary);
+ color: var(--background-primary);
+ border-radius: 0.5rem;
  padding-left: 0.6rem;
  padding-right: 0.6rem;
 }

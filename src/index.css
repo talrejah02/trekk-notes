@@ -26,3 +26,16 @@
     transition: 0.3s;
     margin: 1rem;
 }
+.page-header{
+    margin-top: 1rem;
+}
+
+.page-header-text{
+    color: var(--font-primary);
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+.page-error{
+    color: var(--primary);
+    font-size: 1.4rem;
+}

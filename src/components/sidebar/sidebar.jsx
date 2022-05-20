@@ -1,9 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { Archiveicon, Loginicon, Notesicon, Trashicon } from "../assets/svg";
+import { useAuth } from "../../context/authContext";
+import { Archiveicon, Loginicon, Logouticon, Notesicon, Trashicon } from "../assets/svg";
 import "./sidebar.css";
 
 function Sidebar() {
+  const {isLogin,setLogin}=useAuth()
   return (
     <article className="sidebar">
       <header className="sidebar-header">
@@ -22,7 +24,7 @@ function Sidebar() {
             </NavLink>
           </section>
           <section className="nav-link">
-            <NavLink className="nav-btn" to="/archive">
+            <NavLink className="nav-btn" to="/archives">
               <span className="nav-icon">
                 <Archiveicon />
               </span>
@@ -39,14 +41,28 @@ function Sidebar() {
           </section>
         </section>
         <footer className="nav-items">
-          <section className="nav-link">
+          {!isLogin ? (<section className="nav-link">
             <NavLink className="nav-btn" to="/signin">
-            <span className="nav-icon">
-                <Loginicon/>
+              <span className="nav-icon">
+                <Loginicon />
               </span>
               Login
             </NavLink>
-          </section>
+          </section>) : (<section className="nav-link" onClick={() => {
+              setLogin(false)
+              localStorage.clear()
+          }}>
+            <NavLink className="nav-btn" to="/signin">
+            <span className="nav-icon">
+                <Logouticon/>
+              </span>
+              Logout
+            </NavLink>
+          </section>)
+
+          }
+          
+          
         </footer>
       </nav>
     </article>

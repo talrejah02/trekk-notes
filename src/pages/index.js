@@ -1,3 +1,5 @@
 export { Home } from "./home/home"
 export { Login } from "./login/login"
-export {Signup} from "./signup/signup"
+export { Signup } from "./signup/signup"
+export { Archivenotes } from "./archive/archiveNotes"
+export {Trashnotes} from "./trash/trashNotes"

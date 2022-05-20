@@ -1,3 +1,7 @@
 .notes-listing{
+    display: flex;
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+    flex-wrap: wrap;
     padding: 1rem;
 }
