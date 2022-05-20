@@ -1,0 +1,32 @@
+.notes-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 15rem;
+    max-height: fit-content;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+    border: 0.1rem solid var(--primary);
+    color: var(--font-primary);
+    font-weight: 500;
+}
+.note-title{
+
+    margin-bottom: 0.5rem;
+}
+.note-action-icons{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    column-gap: 0.5rem;
+}
+.action-icon{
+    width: 2rem;
+    padding: 0.4rem 0.4rem;
+    fill: var(--font-secondary);
+    border-radius: 50%;
+}
+.action-icon:hover{
+    background-color: var(--background-secondary);
+}

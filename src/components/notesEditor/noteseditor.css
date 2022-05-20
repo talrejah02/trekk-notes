@@ -1,0 +1,39 @@
+.note-editor-card{
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    min-width: 35rem;
+    max-width: 35rem;
+    border: 0.1rem solid var(--font-secondary);
+    border-radius: 0.5rem;
+    background-color: var(--background-primary);
+}
+.note-editor-title , .note-editor-body{
+    padding: 0.6rem 0.8rem;
+    color: var(--font-secondary);
+    font-weight: 600;
+}
+.note-editor-title , .note-editor-body:focus{
+    outline: none;
+}
+.editor-action-icons{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 0.5rem;
+}
+.note-editor-title ,.editor-action-icons{
+    display: none;
+}
+.note-editor-card:focus-within .note-editor-title{
+    display:flex;
+}
+.note-editor-card:focus-within .editor-action-icons{
+    display:flex;
+}
+.btn-primay-submit{
+ color: var(--font-secondary);
+ padding-left: 0.6rem;
+ padding-right: 0.6rem;
+}
