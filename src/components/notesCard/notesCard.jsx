@@ -38,7 +38,7 @@ function Notescard({ note, actionType }) {
     }
   };
   return (
-    <div className="notes-card" onClick={cardHandler}>
+    <div className="notes-card" onClick={cardHandler} style={{backgroundColor:note.color}}>
       <span className="note-title">{note.title}</span>
       <span className="note body">{note.body}</span>
       <section className="note-action-icons">
@@ -50,9 +50,6 @@ function Notescard({ note, actionType }) {
               onClick={() => AddtoArchive(note)}
             >
               <Archiveicon />
-            </button>
-            <button className="action-icon" title="Color">
-              <Coloricon />
             </button>
             <button className="action-icon" title="Trash" onClick={()=>AddtoTrash(note)}>
               <Trashicon />
@@ -77,6 +74,7 @@ function Notescard({ note, actionType }) {
             </button>
           </>
         )}
+        
       </section>
     </div>
   );

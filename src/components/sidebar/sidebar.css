@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 15rem;
     background-color: var(--background-secondary);
-    height: 100vh;
+    min-height: 100vh;
   }
   .header-logo {
     color: var(--primary);

@@ -3,7 +3,8 @@ import { Noteslisting } from '../../components'
 import { useTrash } from '../../context/trashContext'
 
 function Trashnotes() {
-    const {trashList} =useTrash()
+  const { trashList } = useTrash()
+  
   return (
     <div className='home'>
            <section className='page-header'>
